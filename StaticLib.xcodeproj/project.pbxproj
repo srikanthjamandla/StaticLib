@@ -15,6 +15,7 @@
 		559181FE1CF434B10016F0A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 559181FC1CF434B10016F0A4 /* LaunchScreen.storyboard */; };
 		559182091CF434B20016F0A4 /* StaticLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 559182081CF434B20016F0A4 /* StaticLibTests.m */; };
 		559182141CF434B20016F0A4 /* StaticLibUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 559182131CF434B20016F0A4 /* StaticLibUITests.m */; };
+		559182251CF434C30016F0A4 /* libStringOperations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 559182241CF434C30016F0A4 /* libStringOperations.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5591820F1CF434B20016F0A4 /* StaticLibUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaticLibUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		559182131CF434B20016F0A4 /* StaticLibUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticLibUITests.m; sourceTree = "<group>"; };
 		559182151CF434B20016F0A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		559182231CF434C30016F0A4 /* StringOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringOperations.h; sourceTree = "<group>"; };
+		559182241CF434C30016F0A4 /* libStringOperations.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStringOperations.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559182251CF434C30016F0A4 /* libStringOperations.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +109,8 @@
 				559181F21CF434B10016F0A4 /* AppDelegate.m */,
 				559181F41CF434B10016F0A4 /* ViewController.h */,
 				559181F51CF434B10016F0A4 /* ViewController.m */,
+				559182211CF434C30016F0A4 /* include */,
+				559182241CF434C30016F0A4 /* libStringOperations.a */,
 				559181F71CF434B10016F0A4 /* Main.storyboard */,
 				559181FA1CF434B10016F0A4 /* Assets.xcassets */,
 				559181FC1CF434B10016F0A4 /* LaunchScreen.storyboard */,
@@ -138,6 +144,22 @@
 				559182151CF434B20016F0A4 /* Info.plist */,
 			);
 			path = StaticLibUITests;
+			sourceTree = "<group>";
+		};
+		559182211CF434C30016F0A4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				559182221CF434C30016F0A4 /* StringOperations */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		559182221CF434C30016F0A4 /* StringOperations */ = {
+			isa = PBXGroup;
+			children = (
+				559182231CF434C30016F0A4 /* StringOperations.h */,
+			);
+			path = StringOperations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +439,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StaticLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StaticLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosapps.StaticLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -428,6 +454,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StaticLib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/StaticLib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosapps.StaticLib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
